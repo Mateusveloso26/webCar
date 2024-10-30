@@ -17,7 +17,7 @@ export function Input({ type, name, placeholder,register,error,ruler }: InputPro
       {...register(name,ruler)}
       id={name}
       />
-      {error && <p>{error}</p>}
+      {error && <p className="my-1 text-red-600">{error}</p>}
     </div>
   );
 }
