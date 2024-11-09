@@ -6,7 +6,7 @@ import { Input } from "../../components/input";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-
+import  toast  from "react-hot-toast";
 import { auth } from "../../services/firebaseConection";
 import {
   createUserWithEmailAndPassword,
@@ -57,12 +57,12 @@ export function Register() {
           email:data.email,
           uid: user.user.uid
         })
-        console.log("CADASTRO OK");
+        toast.success("Bem vindo ao WebCarros !");
         navigate("/dashboard", { replace: true });
       })
       .catch((error) => {
-        console.log("ERRO AO CADASTRAR ESSE USUÁRIO");
-
+        
+        toast.error("Erro ao criar conta");
         console.log(error);
       });
   }

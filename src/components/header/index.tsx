@@ -18,7 +18,7 @@ export function Header() {
 
         {!loadingAuth && signed && (
           <Link to="/dashboard">
-            <FaRegUserCircle size={28} color="#000" />
+            <FaRegUserCircle size={30} color="#000" />
           </Link>
         )}
 
