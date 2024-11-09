@@ -18,7 +18,6 @@ Uma plataforma inovadora para compra e venda de veículos, desenvolvida com Reac
 - **TypeScript:** Superset do JavaScript que adiciona tipagem estática.
 - **Tailwind CSS:** Framework utilitário para estilização rápida e responsiva.
 - **React Router:** Navegação entre as diferentes páginas do aplicativo.
-- **Axios:** Cliente HTTP para realizar chamadas à API.
 - **React Icons:** Conjunto de ícones para uso em toda a aplicação.
 - **Swiper:** Biblioteca para criar sliders responsivos e atraentes para a exibição de produtos.
 - **React Hot Toast:** Biblioteca para exibir notificações de feedback aos usuários.
