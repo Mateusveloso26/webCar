@@ -98,7 +98,7 @@ export function Home() {
           onChange={(e) => setInput(e.target.value)}
         />
         <button
-          className="bg-red-500 h-9 px-8 rounded-lg text-white font-medium text-lg"
+          className="bg-red-500 h-9 px-8 rounded-lg text-white font-medium text-lg hover:bg-red-600 transition-all duration-300"
           onClick={handleSearchCar}
         >
           Buscar
@@ -112,22 +112,24 @@ export function Home() {
       <main className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 ">
         {cars.map((car) => (
           <Link key={car.id} to={`/car/${car.id}`}>
-            <section className="w-full bg-white rounded-lg">
+            <section className="w-full  bg-white rounded-lg relative group overflow-hidden">
               <div
-                className="w-full h-72 rounded-lg bg-slate-200"
+                className="w-full h-72 rounded-lg bg-slate-200 "
                 style={{
                   display: loadImages.includes(car.id) ? "none" : "block",
                 }}
               ></div>
-              <img
-                className="w-full rounded-lg mb-2 max-h-72 hover:scale-105 transition-all"
-                src={car.images[0].url}
-                alt={car.name}
-                onLoad={() => handleImageLoad(car.id)}
-                style={{
-                  display: loadImages.includes(car.id) ? "block" : "none",
-                }}
-              />
+              <div className="max-h-72 bg-white rounded-lg relative group overflow-hidden">
+                <img
+                  className="w-full mb-4 max-h-72 group-hover:scale-110 transition-all duration-300"
+                  src={car.images[0].url}
+                  alt={car.name}
+                  onLoad={() => handleImageLoad(car.id)}
+                  style={{
+                    display: loadImages.includes(car.id) ? "block" : "none",
+                  }}
+                />
+              </div>
               <p className="font-bold mt-1 mb-2 px-2">{car.name}</p>
 
               <div className="flex flex-col px-2">
